@@ -58,7 +58,7 @@ class SmtpTransport extends AbstractTransport {
  *
  * A response consists of one or more lines containing a response
  * code and an optional response message text:
- * ```
+ * {{{
  * array(
  *     array(
  *         'code' => '250',
@@ -74,7 +74,7 @@ class SmtpTransport extends AbstractTransport {
  *     ),
  *     // etc...
  * )
- * ```
+ * }}}
  *
  * @return array
  */
@@ -104,7 +104,7 @@ class SmtpTransport extends AbstractTransport {
 /**
  * Set the configuration
  *
- * @param array $config Configuration options.
+ * @param array $config
  * @return array Returns configs
  */
 	public function config($config = null) {
@@ -127,7 +127,7 @@ class SmtpTransport extends AbstractTransport {
 /**
  * Parses and stores the reponse lines in `'code' => 'message'` format.
  *
- * @param array $responseLines Response lines to parse.
+ * @param array $responseLines
  * @return void
  */
 	protected function _bufferResponseLines(array $responseLines) {
@@ -191,22 +191,18 @@ class SmtpTransport extends AbstractTransport {
  */
 	protected function _auth() {
 		if (isset($this->_config['username']) && isset($this->_config['password'])) {
-			$replyCode = $this->_smtpSend('AUTH LOGIN', '334|500|502|504');
-			if ($replyCode == '334') {
-				try {
-					$this->_smtpSend(base64_encode($this->_config['username']), '334');
-				} catch (SocketException $e) {
+			$authRequired = $this->_smtpSend('AUTH LOGIN', '334|503');
+			if ($authRequired == '334') {
+				if (!$this->_smtpSend(base64_encode($this->_config['username']), '334')) {
 					throw new SocketException(__d('cake_dev', 'SMTP server did not accept the username.'));
 				}
-				try {
-					$this->_smtpSend(base64_encode($this->_config['password']), '235');
-				} catch (SocketException $e) {
+				if (!$this->_smtpSend(base64_encode($this->_config['password']), '235')) {
 					throw new SocketException(__d('cake_dev', 'SMTP server did not accept the password.'));
 				}
-			} elseif ($replyCode == '504') {
-				throw new SocketException(__d('cake_dev', 'SMTP authentication method not allowed, check if SMTP server requires TLS.'));
-			} else {
-				throw new SocketException(__d('cake_dev', 'AUTH command not recognized or not implemented, SMTP server may not require authentication.'));
+			} elseif ($authRequired == '504') {
+				throw new SocketException(__d('cake_dev', 'SMTP authentication method not allowed, check if SMTP server requires TLS'));
+			} elseif ($authRequired != '503') {
+				throw new SocketException(__d('cake_dev', 'SMTP does not require authentication.'));
 			}
 		}
 	}
@@ -340,7 +336,7 @@ class SmtpTransport extends AbstractTransport {
  * Protected method for sending data to SMTP connection
  *
  * @param string $data data to be sent to SMTP server
- * @param string|bool $checkCode code to check for in server response, false to skip
+ * @param string|boolean $checkCode code to check for in server response, false to skip
  * @return void
  * @throws SocketException
  */

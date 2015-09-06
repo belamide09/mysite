@@ -19,6 +19,7 @@
 /**
  * String handling methods.
  *
+ *
  * @package       Cake.Utility
  */
 class String {
@@ -132,21 +133,21 @@ class String {
 			}
 			if ($tmpOffset !== -1) {
 				$buffer .= substr($data, $offset, ($tmpOffset - $offset));
-				if (!$depth && $data{$tmpOffset} === $separator) {
+				if (!$depth && $data{$tmpOffset} == $separator) {
 					$results[] = $buffer;
 					$buffer = '';
 				} else {
 					$buffer .= $data{$tmpOffset};
 				}
-				if ($leftBound !== $rightBound) {
-					if ($data{$tmpOffset} === $leftBound) {
+				if ($leftBound != $rightBound) {
+					if ($data{$tmpOffset} == $leftBound) {
 						$depth++;
 					}
-					if ($data{$tmpOffset} === $rightBound) {
+					if ($data{$tmpOffset} == $rightBound) {
 						$depth--;
 					}
 				} else {
-					if ($data{$tmpOffset} === $leftBound) {
+					if ($data{$tmpOffset} == $leftBound) {
 						if (!$open) {
 							$depth++;
 							$open = true;
@@ -252,8 +253,8 @@ class String {
  * is to replace all whitespace and unneeded markup around placeholders that did not get replaced
  * by String::insert().
  *
- * @param string $str String to clean.
- * @param array $options Options list.
+ * @param string $str
+ * @param array $options
  * @return string
  * @see String::insert()
  */
@@ -322,7 +323,7 @@ class String {
  * - `indentAt` 0 based index to start indenting at. Defaults to 0.
  *
  * @param string $text The text to format.
- * @param array|int $options Array of options to use, or an integer to wrap the text to.
+ * @param array|integer $options Array of options to use, or an integer to wrap the text to.
  * @return string Formatted text.
  */
 	public static function wrap($text, $options = array()) {
@@ -346,32 +347,15 @@ class String {
 	}
 
 /**
- * Unicode and newline aware version of wordwrap.
+ * Unicode aware version of wordwrap.
  *
  * @param string $text The text to format.
- * @param int $width The width to wrap to. Defaults to 72.
+ * @param integer $width The width to wrap to. Defaults to 72.
  * @param string $break The line is broken using the optional break parameter. Defaults to '\n'.
- * @param bool $cut If the cut is set to true, the string is always wrapped at the specified width.
+ * @param boolean $cut If the cut is set to true, the string is always wrapped at the specified width.
  * @return string Formatted text.
  */
 	public static function wordWrap($text, $width = 72, $break = "\n", $cut = false) {
-		$paragraphs = explode($break, $text);
-		foreach ($paragraphs as &$paragraph) {
-			$paragraph = String::_wordWrap($paragraph, $width, $break, $cut);
-		}
-		return implode($break, $paragraphs);
-	}
-
-/**
- * Unicode aware version of wordwrap as helper method.
- *
- * @param string $text The text to format.
- * @param int $width The width to wrap to. Defaults to 72.
- * @param string $break The line is broken using the optional break parameter. Defaults to '\n'.
- * @param bool $cut If the cut is set to true, the string is always wrapped at the specified width.
- * @return string Formatted text.
- */
-	protected static function _wordWrap($text, $width = 72, $break = "\n", $cut = false) {
 		if ($cut) {
 			$parts = array();
 			while (mb_strlen($text) > 0) {
@@ -488,7 +472,7 @@ class String {
  * - `exact` If false, $text will not be cut mid-word
  *
  * @param string $text String to truncate.
- * @param int $length Length of returned string, including ellipsis.
+ * @param integer $length Length of returned string, including ellipsis.
  * @param array $options An array of options.
  * @return string Trimmed string.
  */
@@ -529,7 +513,7 @@ class String {
  * - `html` If true, HTML tags would be handled correctly
  *
  * @param string $text String to truncate.
- * @param int $length Length of returned string, including ellipsis.
+ * @param integer $length Length of returned string, including ellipsis.
  * @param array $options An array of html attributes and options.
  * @return string Trimmed string.
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/text.html#TextHelper::truncate
@@ -649,7 +633,7 @@ class String {
  *
  * @param string $text String to search the phrase in
  * @param string $phrase Phrase that will be searched for
- * @param int $radius The amount of characters that will be returned on each side of the founded phrase
+ * @param integer $radius The amount of characters that will be returned on each side of the founded phrase
  * @param string $ellipsis Ending that will be appended
  * @return string Modified string
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/text.html#TextHelper::excerpt
@@ -688,18 +672,15 @@ class String {
 	}
 
 /**
- * Creates a comma separated list where the last two items are joined with 'and', forming natural language.
+ * Creates a comma separated list where the last two items are joined with 'and', forming natural English
  *
- * @param array $list The list to be joined.
- * @param string $and The word used to join the last and second last items together with. Defaults to 'and'.
- * @param string $separator The separator used to join all the other items together. Defaults to ', '.
+ * @param array $list The list to be joined
+ * @param string $and The word used to join the last and second last items together with. Defaults to 'and'
+ * @param string $separator The separator used to join all the other items together. Defaults to ', '
  * @return string The glued together string.
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/text.html#TextHelper::toList
  */
-	public static function toList($list, $and = null, $separator = ', ') {
-		if ($and === null) {
-			$and = __d('cake', 'and');
-		}
+	public static function toList($list, $and = 'and', $separator = ', ') {
 		if (count($list) > 1) {
 			return implode($separator, array_slice($list, null, -1)) . ' ' . $and . ' ' . array_pop($list);
 		}

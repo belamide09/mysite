@@ -23,11 +23,6 @@ App::uses('Hash', 'Utility');
  */
 class HashTest extends CakeTestCase {
 
-/**
- * Data provider
- *
- * @return array
- */
 	public static function articleData() {
 		return array(
 			array(
@@ -141,11 +136,6 @@ class HashTest extends CakeTestCase {
 		);
 	}
 
-/**
- * Data provider
- *
- * @return array
- */
 	public static function userData() {
 		return array(
 			array(
@@ -230,29 +220,6 @@ class HashTest extends CakeTestCase {
 	}
 
 /**
- * Test get() with an invalid path
- *
- * @expectedException InvalidArgumentException
- * @return void
- */
-	public function testGetInvalidPath() {
-		Hash::get(array('one' => 'two'), true);
-	}
-
-/**
- * Test testGetNullPath()
- *
- * @return void
- */
-	public function testGetNullPath() {
-		$result = Hash::get(array('one' => 'two'), null, '-');
-		$this->assertEquals('-', $result);
-
-		$result = Hash::get(array('one' => 'two'), '', '-');
-		$this->assertEquals('-', $result);
-	}
-
-/**
  * Test dimensions.
  *
  * @return void
@@ -288,14 +255,6 @@ class HashTest extends CakeTestCase {
  * @return void
  */
 	public function testMaxDimensions() {
-		$data = array();
-		$result = Hash::maxDimensions($data);
-		$this->assertEquals(0, $result);
-
-		$data = array('a', 'b');
-		$result = Hash::maxDimensions($data);
-		$this->assertEquals(1, $result);
-
 		$data = array('1' => '1.1', '2', '3' => array('3.1' => '3.1.1'));
 		$result = Hash::maxDimensions($data);
 		$this->assertEquals($result, 2);
@@ -899,18 +858,9 @@ class HashTest extends CakeTestCase {
 				'active' => false
 			),
 		);
-		$result = Hash::extract($users, '{n}[active=0]');
-		$this->assertCount(1, $result);
-		$this->assertEquals($users[2], $result[0]);
-
 		$result = Hash::extract($users, '{n}[active=false]');
 		$this->assertCount(1, $result);
 		$this->assertEquals($users[2], $result[0]);
-
-		$result = Hash::extract($users, '{n}[active=1]');
-		$this->assertCount(2, $result);
-		$this->assertEquals($users[0], $result[0]);
-		$this->assertEquals($users[1], $result[1]);
 
 		$result = Hash::extract($users, '{n}[active=true]');
 		$this->assertCount(2, $result);
@@ -1071,7 +1021,7 @@ class HashTest extends CakeTestCase {
  * @return void
  */
 	public function testSort() {
-		$result = Hash::sort(array(), '{n}.name');
+		$result = Hash::sort(array(), '{n}.name', 'asc');
 		$this->assertEquals(array(), $result);
 
 		$a = array(
@@ -1094,7 +1044,7 @@ class HashTest extends CakeTestCase {
 				'Friend' => array(array('name' => 'Nate'))
 			)
 		);
-		$a = Hash::sort($a, '{n}.Friend.{n}.name');
+		$a = Hash::sort($a, '{n}.Friend.{n}.name', 'asc');
 		$this->assertEquals($a, $b);
 
 		$b = array(
@@ -1398,13 +1348,6 @@ class HashTest extends CakeTestCase {
 			'pages' => array('name' => array()),
 		);
 		$this->assertEquals($expected, $result);
-
-		$a = array(
-			'foo' => array('bar' => 'baz')
-		);
-		$result = Hash::insert($a, 'some.0123.path', array('foo' => array('bar' => 'baz')));
-		$expected = array('foo' => array('bar' => 'baz'));
-		$this->assertEquals($expected, Hash::get($result, 'some.0123.path'));
 	}
 
 /**
@@ -1518,18 +1461,6 @@ class HashTest extends CakeTestCase {
 				'name' => 'pages'
 			)
 		);
-		$this->assertEquals($expected, $result);
-
-		$array = array(
-			0 => 'foo',
-			1 => array(
-				0 => 'baz'
-			)
-		);
-		$expected = $array;
-		$result = Hash::remove($array, '{n}.part');
-		$this->assertEquals($expected, $result);
-		$result = Hash::remove($array, '{n}.{n}.part');
 		$this->assertEquals($expected, $result);
 	}
 
@@ -1855,11 +1786,6 @@ class HashTest extends CakeTestCase {
 		$this->assertEquals($expected, $result);
 	}
 
-/**
- * testApply
- *
- * @return void
- */
 	public function testApply() {
 		$data = self::articleData();
 
@@ -1882,8 +1808,8 @@ class HashTest extends CakeTestCase {
 /**
  * testing method for map callbacks.
  *
- * @param mixed $value Value
- * @return mixed
+ * @param mixed $value
+ * @return mixed.
  */
 	public function mapCallback($value) {
 		return $value * 2;
@@ -1892,9 +1818,9 @@ class HashTest extends CakeTestCase {
 /**
  * testing method for reduce callbacks.
  *
- * @param mixed $one First param
- * @param mixed $two Second param
- * @return mixed
+ * @param mixed $one
+ * @param mixed $two
+ * @return mixed.
  */
 	public function reduceCallback($one, $two) {
 		return $one + $two;
@@ -2317,9 +2243,8 @@ class HashTest extends CakeTestCase {
 	}
 
 /**
- * Tests that nest() throws an InvalidArgumentException when providing an invalid input.
+ * Tests that nest() returns an empty array for invalid input instead of throwing notices.
  *
- * @expectedException InvalidArgumentException
  * @return void
  */
 	public function testNestInvalid() {
@@ -2332,7 +2257,8 @@ class HashTest extends CakeTestCase {
 				)
 			)
 		);
-		Hash::nest($input);
+		$result = Hash::nest($input);
+		$this->assertSame(array(), $result);
 	}
 
 /**

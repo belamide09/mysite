@@ -1,0 +1,1176 @@
+2015-09-05 16:42:07 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/api/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:42:11 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/api/users/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:42:17 Error: [MissingTableException] Table questions for model Question was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'questions',
+  'class' => 'Question',
+  'ds' => 'default',
+)
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('questions')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\mysite\api\Controller\QuestionController.php(17): Model->find('all')
+#4 [internal function]: QuestionController->index()
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 16:43:13 Error: [MissingTableException] Table questions for model Question was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'questions',
+  'class' => 'Question',
+  'ds' => 'default',
+)
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('questions')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\mysite\api\Controller\QuestionController.php(17): Model->find('all')
+#4 [internal function]: QuestionController->index()
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 16:43:36 Error: [MissingControllerException] Controller class QuestionController could not be found.
+Exception Attributes: array (
+  'class' => 'QuestionController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:43:55 Error: [MissingTableException] Table questions for model Question was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'questions',
+  'class' => 'Question',
+  'ds' => 'default',
+)
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('questions')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\mysite\api\Controller\QuestionController.php(18): Model->find('all')
+#4 [internal function]: QuestionController->index()
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 16:44:19 Error: [MissingTableException] Table maintenances for model Maintenance was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'maintenances',
+  'class' => 'Maintenance',
+  'ds' => 'default',
+)
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('maintenances')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('first', Array)
+#3 C:\xampp\htdocs\mysite\lib\Model\MaintenanceTable.php(20): Model->find('first', Array)
+#4 C:\xampp\htdocs\mysite\api\Controller\AppController.php(127): MaintenanceTable::getMaintenance()
+#5 C:\xampp\htdocs\mysite\api\Controller\QuestionController.php(11): AppController->beforeFilter()
+#6 [internal function]: QuestionController->beforeFilter(Object(CakeEvent))
+#7 C:\xampp\htdocs\mysite\lib\Cake\Event\CakeEventManager.php(244): call_user_func(Array, Object(CakeEvent))
+#8 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#10 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#11 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-05 16:44:39 Error: Fatal Error (1): Call to a member function allow() on null in [C:\xampp\htdocs\mysite\api\Controller\QuestionController.php, line 12]
+2015-09-05 16:44:39 Error: [FatalErrorException] Call to a member function allow() on null
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:44:54 Error: Fatal Error (1): Call to a member function allow() on null in [C:\xampp\htdocs\mysite\api\Controller\QuestionController.php, line 12]
+2015-09-05 16:44:54 Error: [FatalErrorException] Call to a member function allow() on null
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:44:56 Error: [MissingTableException] Table maintenances for model Maintenance was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'maintenances',
+  'class' => 'Maintenance',
+  'ds' => 'default',
+)
+Request URL: /mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('maintenances')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('first', Array)
+#3 C:\xampp\htdocs\mysite\lib\Model\MaintenanceTable.php(20): Model->find('first', Array)
+#4 C:\xampp\htdocs\mysite\api\Controller\AppController.php(127): MaintenanceTable::getMaintenance()
+#5 C:\xampp\htdocs\mysite\api\Controller\QuestionController.php(11): AppController->beforeFilter()
+#6 [internal function]: QuestionController->beforeFilter(Object(CakeEvent))
+#7 C:\xampp\htdocs\mysite\lib\Cake\Event\CakeEventManager.php(244): call_user_func(Array, Object(CakeEvent))
+#8 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#10 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#11 C:\xampp\htdocs\mysite\api\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-05 16:46:17 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/api/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\api\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:46:36 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/api/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\api\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:46:38 Error: [MissingControllerException] Controller class UsersLoginController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersLoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/api/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\api\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:46:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/api/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\api\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:47:11 Error: [MissingControllerException] Controller class MysiteController could not be found.
+Exception Attributes: array (
+  'class' => 'MysiteController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/app/mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:47:13 Error: [MissingControllerException] Controller class MysiteController could not be found.
+Exception Attributes: array (
+  'class' => 'MysiteController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/app/mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:47:21 Error: [MissingControllerException] Controller class MysiteController could not be found.
+Exception Attributes: array (
+  'class' => 'MysiteController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/app/mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:47:29 Error: [MissingControllerException] Controller class MysiteController could not be found.
+Exception Attributes: array (
+  'class' => 'MysiteController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/app/mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:47:33 Error: [MissingControllerException] Controller class MysiteController could not be found.
+Exception Attributes: array (
+  'class' => 'MysiteController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/app/mysite/api/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:47:39 Error: [MissingControllerException] Controller class MysiteController could not be found.
+Exception Attributes: array (
+  'class' => 'MysiteController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/app/mysite/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:47:43 Error: [MissingControllerException] Controller class MysiteController could not be found.
+Exception Attributes: array (
+  'class' => 'MysiteController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/app/mysite/api/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:48:02 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/user/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\user\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:48:23 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/user/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:48:25 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 16:50:14 Error: Fatal Error (4): syntax error, unexpected '$belongsTo' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\mysite\lib\Model\Base\Question.php, line 4]
+2015-09-05 16:50:14 Error: [FatalErrorException] syntax error, unexpected '$belongsTo' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:50:21 Error: Fatal Error (1): Call to undefined method Question::find() in [C:\xampp\htdocs\mysite\app\Controller\QuestionController.php, line 18]
+2015-09-05 16:50:21 Error: [FatalErrorException] Call to undefined method Question::find()
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:50:36 Error: Fatal Error (1): Call to undefined method Question::find() in [C:\xampp\htdocs\mysite\app\Controller\QuestionController.php, line 18]
+2015-09-05 16:50:36 Error: [FatalErrorException] Call to undefined method Question::find()
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:50:52 Error: Fatal Error (1): Call to undefined method Question::find() in [C:\xampp\htdocs\mysite\app\Controller\QuestionController.php, line 18]
+2015-09-05 16:50:52 Error: [FatalErrorException] Call to undefined method Question::find()
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:51:05 Error: Fatal Error (1): Call to undefined method Question::find() in [C:\xampp\htdocs\mysite\app\Controller\QuestionController.php, line 18]
+2015-09-05 16:51:05 Error: [FatalErrorException] Call to undefined method Question::find()
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:51:28 Error: Fatal Error (1): Call to undefined method Question::find() in [C:\xampp\htdocs\mysite\app\Controller\QuestionController.php, line 18]
+2015-09-05 16:51:28 Error: [FatalErrorException] Call to undefined method Question::find()
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:52:16 Error: Fatal Error (1): Call to undefined method Question::find() in [C:\xampp\htdocs\mysite\app\Controller\QuestionController.php, line 18]
+2015-09-05 16:52:16 Error: [FatalErrorException] Call to undefined method Question::find()
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:52:22 Error: Fatal Error (1): Call to undefined method Question::find() in [C:\xampp\htdocs\mysite\app\Controller\QuestionController.php, line 18]
+2015-09-05 16:52:22 Error: [FatalErrorException] Call to undefined method Question::find()
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:53:12 Error: Fatal Error (64): Cannot redeclare class Admin in [C:\xampp\htdocs\mysite\lib\Model\Base\Question.php, line 64]
+2015-09-05 16:53:12 Error: [FatalErrorException] Cannot redeclare class Admin
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 64, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 64, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 16:53:27 Error: [MissingTableException] Table admins for model Question was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'admins',
+  'class' => 'Question',
+  'ds' => 'default',
+)
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('admins')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\mysite\app\Controller\QuestionController.php(18): Model->find('all')
+#4 [internal function]: QuestionController->index()
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 16:54:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'choises.question_id' in 'field list'
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `choises...', Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `choises...', Array, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1421): DboSource->fetchAll('SELECT `choises...', false)
+#4 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1259): DboSource->_fetchHasMany(Object(Question), 'SELECT `choises...', Array)
+#5 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1142): DboSource->queryAssociation(Object(Question), Object(AppModel), 'hasMany', 'choises', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Question), Array)
+#7 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\mysite\app\Controller\QuestionController.php(18): Model->find('all')
+#9 [internal function]: QuestionController->index()
+#10 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#11 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#13 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-05 16:57:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'answers.question_id' in 'field list'
+Request URL: /mysite/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `answers...', Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `answers...', Array, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1421): DboSource->fetchAll('SELECT `answers...', false)
+#4 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1259): DboSource->_fetchHasMany(Object(Question), 'SELECT `answers...', Array)
+#5 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1142): DboSource->queryAssociation(Object(Question), Object(AppModel), 'hasMany', 'answers', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Question), Array)
+#7 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\mysite\app\Controller\QuestionController.php(18): Model->find('all')
+#9 [internal function]: QuestionController->index()
+#10 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#11 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#13 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-05 17:00:23 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 17:00:26 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 17:14:05 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /mysite/post
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('posts')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\mysite\app\Controller\PostController.php(13): Model->find('all')
+#4 [internal function]: PostController->index()
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PostController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 17:19:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Post.id' in 'field list'
+Request URL: /mysite/post
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Post`.`...', Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Post`.`...', Array, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Post`.`...', false)
+#4 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Post), Array)
+#5 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\mysite\app\Controller\PostController.php(13): Model->find('all')
+#7 [internal function]: PostController->index()
+#8 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PostController), Object(CakeRequest))
+#11 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-05 17:19:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Post.id' in 'field list'
+Request URL: /mysite/post
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Post`.`...', Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Post`.`...', Array, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Post`.`...', false)
+#4 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Post), Array)
+#5 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\mysite\app\Controller\PostController.php(13): Model->find('all')
+#7 [internal function]: PostController->index()
+#8 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PostController), Object(CakeRequest))
+#11 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-09-05 17:20:12 Error: [MissingTableException] Table post_answers for model PostAnswers was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'post_answers',
+  'class' => 'PostAnswers',
+  'ds' => 'default',
+)
+Request URL: /mysite/post
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(3501): Model->setSource('post_answers')
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(1357): Model->getDataSource()
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(2494): Model->schema()
+#3 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1735): DboSource->fields(Object(AppModel), 'PostAnswers', '')
+#4 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1238): DboSource->generateAssociationQuery(Object(Post), Object(AppModel), 'hasMany', 'PostAnswers', Array, Array, true)
+#5 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1142): DboSource->queryAssociation(Object(Post), Object(AppModel), 'hasMany', 'PostAnswers', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Post), Array)
+#7 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\mysite\app\Controller\PostController.php(13): Model->find('all')
+#9 [internal function]: PostController->index()
+#10 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#11 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PostController), Object(CakeRequest))
+#13 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-05 17:20:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'File.post_id' in 'field list'
+Request URL: /mysite/post
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `File`.`...', Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `File`.`...', Array, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1421): DboSource->fetchAll('SELECT `File`.`...', false)
+#4 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1259): DboSource->_fetchHasMany(Object(Post), 'SELECT `File`.`...', Array)
+#5 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1142): DboSource->queryAssociation(Object(Post), Object(AppModel), 'hasMany', 'File', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Post), Array)
+#7 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\mysite\app\Controller\PostController.php(13): Model->find('all')
+#9 [internal function]: PostController->index()
+#10 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#11 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PostController), Object(CakeRequest))
+#13 C:\xampp\htdocs\mysite\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-05 17:27:43 Error: Fatal Error (4): syntax error, unexpected ''File'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\mysite\lib\Model\Base\Post.php, line 8]
+2015-09-05 17:27:43 Error: [FatalErrorException] syntax error, unexpected ''File'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /mysite/post
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 17:30:06 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 19:54:25 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 20]
+2015-09-05 19:54:25 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 20)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 20, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 20, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 19:56:05 Error: Fatal Error (4): syntax error, unexpected ''order'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 21]
+2015-09-05 19:56:05 Error: [FatalErrorException] syntax error, unexpected ''order'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 21, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 21, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 19:57:39 Error: [MissingViewException] View file "C:\xampp\htdocs\mysite\exam\View\Question\index.php" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\mysite\\exam\\View\\Question\\index.php',
+)
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#4 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-09-05 20:02:18 Error: [MissingControllerException] Controller class GetQuestionController could not be found.
+Exception Attributes: array (
+  'class' => 'GetQuestionController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/getQuestion
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:02:26 Error: [MissingControllerException] Controller class GetQuestionController could not be found.
+Exception Attributes: array (
+  'class' => 'GetQuestionController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/getQuestion
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:02:33 Error: [MissingControllerException] Controller class QuestionDetailController could not be found.
+Exception Attributes: array (
+  'class' => 'QuestionDetailController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/questionDetail
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:02:38 Error: [MissingControllerException] Controller class QuestionDetailController could not be found.
+Exception Attributes: array (
+  'class' => 'QuestionDetailController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/questionDetail
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:02:49 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:02:59 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:03:04 Error: [MissingViewException] View file "C:\xampp\htdocs\mysite\exam\View\Question\detail.php" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\mysite\\exam\\View\\Question\\detail.php',
+)
+Request URL: /mysite/exam/question/detail
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#4 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-09-05 20:03:08 Error: [MissingViewException] View file "C:\xampp\htdocs\mysite\exam\View\Question\detail.php" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\mysite\\exam\\View\\Question\\detail.php',
+)
+Request URL: /mysite/exam/question/detail/3
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#4 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-09-05 20:07:59 Error: Fatal Error (1): Cannot use object of type QuestionTable as array in [C:\xampp\htdocs\mysite\exam\View\Question\detail.ctp, line 4]
+2015-09-05 20:07:59 Error: [FatalErrorException] Cannot use object of type QuestionTable as array
+Request URL: /mysite/exam/question/detail/3
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:20:23 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'codebuster.answers' doesn't exist
+Request URL: /mysite/exam/question/detail/3
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\Database\Mysql.php(339): DboSource->_execute('SHOW FULL COLUM...')
+#2 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(1360): Mysql->describe(Object(AppModel))
+#3 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(2494): Model->schema()
+#4 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1735): DboSource->fields(Object(AppModel), 'answers', '')
+#5 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1238): DboSource->generateAssociationQuery(Object(Question), Object(AppModel), 'hasMany', 'answers', Array, Array, true)
+#6 C:\xampp\htdocs\mysite\lib\Cake\Model\Datasource\DboSource.php(1142): DboSource->queryAssociation(Object(Question), Object(AppModel), 'hasMany', 'answers', Array, Array, true, Array, 0, Array)
+#7 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2905): DboSource->read(Object(Question), Array)
+#8 C:\xampp\htdocs\mysite\lib\Cake\Model\Model.php(2877): Model->_readDataSource('first', Array)
+#9 C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php(17): Model->find('first', Array)
+#10 [internal function]: QuestionController->detail('3')
+#11 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#12 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#14 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-09-05 20:22:17 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:22:43 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:22:52 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:22:53 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:22:56 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:23:02 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:23:09 Error: [MissingControllerException] Controller class QController could not be found.
+Exception Attributes: array (
+  'class' => 'QController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/q/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:23:12 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:23:16 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:23:18 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:23:31 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:25:11 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:25:23 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/login
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 20:36:40 Error: Fatal Error (1): Call to undefined method myTools::getBaseUrl() in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 11]
+2015-09-05 20:36:40 Error: [FatalErrorException] Call to undefined method myTools::getBaseUrl()
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 11, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 11, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:37:37 Error: Fatal Error (1): Call to undefined function base_url() in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 11]
+2015-09-05 20:37:37 Error: [FatalErrorException] Call to undefined function base_url()
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 11, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 11, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:39:14 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\xampp\htdocs\mysite\config\const.php, line 7]
+2015-09-05 20:39:14 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:40:01 Error: Fatal Error (64): Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in [C:\xampp\htdocs\mysite\config\const.php, line 7]
+2015-09-05 20:40:01 Error: [FatalErrorException] Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot use isse...', 'C:\\xampp\\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use isse...', 'C:\\xampp\\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 64, 'Cannot use isse...', 'C:\\xampp\\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:43:33 Error: Fatal Error (4): syntax error, unexpected ')', expecting '(' in [C:\xampp\htdocs\mysite\config\const.php, line 8]
+2015-09-05 20:43:33 Error: [FatalErrorException] syntax error, unexpected ')', expecting '('
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:46:08 Error: Fatal Error (4): syntax error, unexpected ')', expecting '(' in [C:\xampp\htdocs\mysite\config\const.php, line 8]
+2015-09-05 20:46:08 Error: [FatalErrorException] syntax error, unexpected ')', expecting '('
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:49:45 Error: Fatal Error (4): syntax error, unexpected '$base_url' (T_VARIABLE) in [C:\xampp\htdocs\mysite\config\const.php, line 8]
+2015-09-05 20:49:45 Error: [FatalErrorException] syntax error, unexpected '$base_url' (T_VARIABLE)
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:49:55 Error: Fatal Error (4): syntax error, unexpected 'const' (T_CONST) in [C:\xampp\htdocs\mysite\config\const.php, line 8]
+2015-09-05 20:49:55 Error: [FatalErrorException] syntax error, unexpected 'const' (T_CONST)
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 20:52:21 Error: [ConfigureException] No variable $config found in ../../config/const.php
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Core\Configure.php(298): PhpReader->read('const')
+#1 C:\xampp\htdocs\mysite\exam\Controller\AppController.php(79): Configure::load('const')
+#2 C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php(6): AppController->beforeFilter()
+#3 [internal function]: QuestionController->beforeFilter(Object(CakeEvent))
+#4 C:\xampp\htdocs\mysite\lib\Cake\Event\CakeEventManager.php(244): call_user_func(Array, Object(CakeEvent))
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 20:52:35 Error: [ConfigureException] No variable $config found in ../../config/const.php
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Core\Configure.php(298): PhpReader->read('const')
+#1 C:\xampp\htdocs\mysite\exam\Controller\AppController.php(80): Configure::load('const')
+#2 C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php(6): AppController->beforeFilter()
+#3 [internal function]: QuestionController->beforeFilter(Object(CakeEvent))
+#4 C:\xampp\htdocs\mysite\lib\Cake\Event\CakeEventManager.php(244): call_user_func(Array, Object(CakeEvent))
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 20:53:08 Error: [ConfigureException] No variable $config found in ../../config/const.php
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Core\Configure.php(298): PhpReader->read('const')
+#1 C:\xampp\htdocs\mysite\exam\Controller\AppController.php(80): Configure::load('const')
+#2 C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php(6): AppController->beforeFilter()
+#3 [internal function]: QuestionController->beforeFilter(Object(CakeEvent))
+#4 C:\xampp\htdocs\mysite\lib\Cake\Event\CakeEventManager.php(244): call_user_func(Array, Object(CakeEvent))
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 20:54:51 Error: [ConfigureException] No variable $config found in ../../config/const.php
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Core\Configure.php(298): PhpReader->read('const')
+#1 C:\xampp\htdocs\mysite\exam\Controller\AppController.php(78): Configure::load('const')
+#2 C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php(6): AppController->beforeFilter()
+#3 [internal function]: QuestionController->beforeFilter(Object(CakeEvent))
+#4 C:\xampp\htdocs\mysite\lib\Cake\Event\CakeEventManager.php(244): call_user_func(Array, Object(CakeEvent))
+#5 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#7 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#8 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-09-05 21:00:30 Error: Fatal Error (4): syntax error, unexpected '(', expecting ')' in [C:\xampp\htdocs\mysite\exam\Controller\AppController.php, line 47]
+2015-09-05 21:00:30 Error: [FatalErrorException] syntax error, unexpected '(', expecting ')'
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 21:00:49 Error: Fatal Error (4): syntax error, unexpected '(', expecting ')' in [C:\xampp\htdocs\mysite\exam\Controller\AppController.php, line 47]
+2015-09-05 21:00:49 Error: [FatalErrorException] syntax error, unexpected '(', expecting ')'
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 21:09:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 21:10:56 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 21:11:19 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 21:11:55 Error: [MissingControllerException] Controller class ExamControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'ExamControllerController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 21:12:01 Error: [MissingControllerException] Controller class ExamController could not be found.
+Exception Attributes: array (
+  'class' => 'ExamController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 21:12:40 Error: [MissingActionException] Action QuestionController::2() could not be found.
+Exception Attributes: array (
+  'controller' => 'QuestionController',
+  'action' => '2',
+)
+Request URL: /mysite/exam/question/2
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#2 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-05 21:12:43 Error: [MissingActionException] Action QuestionController::3() could not be found.
+Exception Attributes: array (
+  'controller' => 'QuestionController',
+  'action' => '3',
+)
+Request URL: /mysite/exam/question/3
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#2 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-05 21:27:23 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 13]
+2015-09-05 21:27:23 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 13, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 13, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 21:27:47 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 13]
+2015-09-05 21:27:47 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 13, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 13, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 21:29:11 Error: Fatal Error (4): syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 16]
+2015-09-05 21:29:11 Error: [FatalErrorException] syntax error, unexpected ''conditions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 16, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 16, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:42:44 Error: [MissingViewException] View file "C:\xampp\htdocs\mysite\exam\View\Question\add_answer.php" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\mysite\\exam\\View\\Question\\add_answer.php',
+)
+Request URL: /mysite/exam/question/addAnswer
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\mysite\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\mysite\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(QuestionController), Object(CakeRequest))
+#4 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-09-05 23:46:32 Error: Fatal Error (4): syntax error, unexpected ''choise_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 54]
+2015-09-05 23:46:32 Error: [FatalErrorException] syntax error, unexpected ''choise_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /mysite/exam/question/addAnswer
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 54, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 54, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:47:52 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 60]
+2015-09-05 23:47:52 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /mysite/exam/question/addAnswer
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 60, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 60, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:47:59 Error: Fatal Error (1): Call to a member function delete() on null in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 58]
+2015-09-05 23:47:59 Error: [FatalErrorException] Call to a member function delete() on null
+Request URL: /mysite/exam/question/addAnswer
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 58, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 58, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:48:22 Error: Fatal Error (1): Call to a member function saveAll() on null in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 67]
+2015-09-05 23:48:22 Error: [FatalErrorException] Call to a member function saveAll() on null
+Request URL: /mysite/exam/question/addAnswer
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 67, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 67, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:54:12 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:54:12 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:54:31 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:54:31 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:54:34 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:54:34 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:54:58 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 22]
+2015-09-05 23:54:58 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mysite/exam/question
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 22, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 22, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:55:07 Error: [MissingControllerException] Controller class PublicFunctionAddAnswer(){Controller could not be found.
+Exception Attributes: array (
+  'class' => 'PublicFunctionAddAnswer(){Controller',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/public%20function%20addAnswer()%20%7B
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 23:55:12 Error: [MissingControllerException] Controller class AddAnswerController could not be found.
+Exception Attributes: array (
+  'class' => 'AddAnswerController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/exam/addAnswer
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\exam\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-05 23:55:21 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 38]
+2015-09-05 23:55:21 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mysite/exam/question/detail/3
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 38, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 38, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:55:23 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:55:23 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:55:26 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 22]
+2015-09-05 23:55:26 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mysite/exam/question/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 22, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 22, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-05 23:55:29 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:55:29 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:55:44 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:55:44 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:55:50 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:55:50 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:56:03 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:56:03 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:56:11 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:56:11 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:57:00 Error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+2015-09-05 23:57:00 Error: INSERT INTO `mysite`.`users_question_answers` (`user_id`, `question_id`, `choise_id`) VALUES (NULL, 1, 1)
+2015-09-05 23:59:10 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\mysite\exam\Controller\QuestionController.php, line 66]
+2015-09-05 23:59:10 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /mysite/exam/question/addAnswer
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 66, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 66, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

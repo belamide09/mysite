@@ -1,5 +1,7 @@
 <?php
 /**
+ *
+ *
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       app.View.Layouts
  * @since         CakePHP(tm) v 0.10.0.1076
@@ -9,7 +11,7 @@
 <html>
 <head>
 <?php echo $this->Html->charset(); ?>
-<title><?php echo $pageTitle; ?></title>
+<title><?php echo $page_title; ?></title>
 
 <?php if (!Configure::read('debug')): ?>
 <meta http-equiv="Refresh" content="<?php echo $pause; ?>;url=<?php echo $url; ?>"/>

@@ -41,15 +41,13 @@ class ControllerTestDispatcher extends Dispatcher {
 /**
  * Use custom routes during tests
  *
- * @var bool
+ * @var boolean
  */
 	public $loadRoutes = true;
 
 /**
  * Returns the test controller
  *
- * @param CakeRequest $request The request instance.
- * @param CakeResponse $response The response instance.
  * @return Controller
  */
 	protected function _getController($request, $response) {
@@ -122,14 +120,14 @@ abstract class ControllerTestCase extends CakeTestCase {
 /**
  * Automatically mock controllers that aren't mocked
  *
- * @var bool
+ * @var boolean
  */
 	public $autoMock = true;
 
 /**
  * Use custom routes during tests
  *
- * @var bool
+ * @var boolean
  */
 	public $loadRoutes = true;
 
@@ -173,7 +171,7 @@ abstract class ControllerTestCase extends CakeTestCase {
  * Once a test has been run on a controller it should be rebuilt
  * to clean up properties.
  *
- * @var bool
+ * @var boolean
  */
 	protected $_dirtyController = false;
 
@@ -183,7 +181,7 @@ abstract class ControllerTestCase extends CakeTestCase {
  *
  * @param string $name The name of the function
  * @param array $arguments Array of arguments
- * @return mixed The return of _testAction.
+ * @return the return of _testAction
  * @throws BadMethodCallException when you call methods that don't exist.
  */
 	public function __call($name, $arguments) {
@@ -210,12 +208,11 @@ abstract class ControllerTestCase extends CakeTestCase {
  *     - `result` Get the return value of the controller action. Useful
  *       for testing requestAction methods.
  *
- * @param string $url The URL to test
+ * @param string $url The url to test
  * @param array $options See options
- * @return mixed The specified return type.
- * @triggers ControllerTestCase $Dispatch, array('request' => $request)
+ * @return mixed
  */
-	protected function _testAction($url, $options = array()) {
+	protected function _testAction($url = '', $options = array()) {
 		$this->vars = $this->result = $this->view = $this->contents = $this->headers = null;
 
 		$options += array(
@@ -271,7 +268,7 @@ abstract class ControllerTestCase extends CakeTestCase {
 			$params['requested'] = 1;
 		}
 		$Dispatch->testController = $this->controller;
-		$Dispatch->response = $this->getMock('CakeResponse', array('send', '_clearBuffer'));
+		$Dispatch->response = $this->getMock('CakeResponse', array('send'));
 		$this->result = $Dispatch->dispatch($request, $Dispatch->response, $params);
 		$this->controller = $Dispatch->testController;
 		$this->vars = $this->controller->viewVars;
