@@ -36,7 +36,7 @@ class ContactTestController extends Controller {
 /**
  * uses property
  *
- * @var mixed
+ * @var mixed null
  */
 	public $uses = null;
 }
@@ -51,7 +51,7 @@ class Contact extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -142,7 +142,7 @@ class ContactTagsContact extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -207,7 +207,7 @@ class ContactTag extends Model {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -234,7 +234,7 @@ class UserForm extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -274,7 +274,7 @@ class OpenidUrl extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -329,7 +329,7 @@ class ValidateUser extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -381,7 +381,7 @@ class ValidateProfile extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -440,7 +440,7 @@ class ValidateItem extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -489,7 +489,7 @@ class TestMail extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var boolean
  */
 	public $useTable = false;
 
@@ -513,7 +513,7 @@ class FormHelperTest extends CakeTestCase {
 /**
  * Do not load the fixtures by default
  *
- * @var bool
+ * @var boolean
  */
 	public $autoFixtures = false;
 
@@ -757,31 +757,6 @@ class FormHelperTest extends CakeTestCase {
 				'name' => 'data[Contact][foo]',
 				'id' => 'ContactFoo',
 				'step' => '0.5'
-			)),
-			'/div'
-		);
-		$this->assertTags($result, $expected);
-	}
-
-/**
- * Tests correct generation of decimal fields as text inputs
- *
- * @return void
- */
-	public function testTextFieldGenerationForDecimalAsText() {
-		$this->Form->create('ValidateUser');
-		$result = $this->Form->input('cost_decimal', array(
-			'type' => 'text'
-		));
-		$expected = array(
-			'div' => array('class' => 'input text'),
-			'label' => array('for' => 'ValidateUserCostDecimal'),
-			'Cost Decimal',
-			'/label',
-			array('input' => array(
-				'type' => 'text',
-				'name' => 'data[ValidateUser][cost_decimal]',
-				'id' => 'ValidateUserCostDecimal',
 			)),
 			'/div'
 		);
@@ -1363,18 +1338,6 @@ class FormHelperTest extends CakeTestCase {
 		$this->Form->radio('Test.test', $options);
 		$expected = array('Test.test');
 		$this->assertEquals($expected, $this->Form->fields);
-
-		$this->Form->radio('Test.all', $options, array(
-			'disabled' => array('option1', 'option2')
-		));
-		$expected = array('Test.test', 'Test.all' => '');
-		$this->assertEquals($expected, $this->Form->fields);
-
-		$this->Form->radio('Test.some', $options, array(
-			'disabled' => array('option1')
-		));
-		$expected = array('Test.test', 'Test.all' => '', 'Test.some');
-		$this->assertEquals($expected, $this->Form->fields);
 	}
 
 /**
@@ -1409,11 +1372,9 @@ class FormHelperTest extends CakeTestCase {
 
 		$this->Form->checkbox('Model.checkbox', array('disabled' => true));
 		$this->Form->text('Model.text', array('disabled' => true));
-		$this->Form->text('Model.text2', array('disabled' => 'disabled'));
-		$this->Form->password('Model.password', array('disabled' => true));
+		$this->Form->password('Model.text', array('disabled' => true));
 		$this->Form->textarea('Model.textarea', array('disabled' => true));
 		$this->Form->select('Model.select', array(1, 2), array('disabled' => true));
-		$this->Form->select('Model.select', array(1, 2), array('disabled' => array(1, 2)));
 		$this->Form->radio('Model.radio', array(1, 2), array('disabled' => array(1, 2)));
 		$this->Form->year('Model.year', null, null, array('disabled' => true));
 		$this->Form->month('Model.month', array('disabled' => true));
@@ -1454,55 +1415,6 @@ class FormHelperTest extends CakeTestCase {
 		$this->Form->create('Address', array('url' => '/articles/view/1'));
 		$result = $this->Form->secure();
 		$this->assertNotContains($expected, $result, 'URL is different');
-	}
-
-/**
- * Ensure named parameters work correctly with hash generation.
- *
- * @return void
- */
-	public function testSecuredFormUrlWorksWithNamedParameter() {
-		$this->Form->request['_Token'] = array('key' => 'testKey');
-
-		$expected = 'c890c5f041b1d83d1610dee8f52cd257df7ce618%3A';
-		$this->Form->create('Address', array(
-			'url' => array('controller' => 'articles', 'action' => 'view', 1, 'type' => 'red')
-		));
-		$result = $this->Form->secure();
-		$this->assertContains($expected, $result);
-	}
-
-/**
- * Test that URL, HTML and identifier show up in their hashs.
- *
- * @return void
- */
-	public function testSecuredFormUrlHasHtmlAndIdentifier() {
-		$this->Form->request['_Token'] = array('key' => 'testKey');
-
-		$expected = 'ece0693fb1b19ca116133db1832ac29baaf41ce5%3A';
-		$this->Form->create('Address', array(
-			'url' => array(
-				'controller' => 'articles',
-				'action' => 'view',
-				'?' => array(
-					'page' => 1,
-					'limit' => 10,
-					'html' => '<>"',
-				),
-				'#' => 'result',
-			),
-		));
-		$result = $this->Form->secure();
-		$this->assertContains($expected, $result);
-
-		$this->Form->create('Address', array('url' => 'http://localhost/articles/view?page=1&limit=10&html=%3C%3E%22#result'));
-		$result = $this->Form->secure();
-		$this->assertContains($expected, $result, 'Full URL should only use path and query.');
-
-		$this->Form->create('Address', array('url' => '/articles/view?page=1&limit=10&html=%3C%3E%22#result'));
-		$result = $this->Form->secure();
-		$this->assertContains($expected, $result, 'URL path + query should work.');
 	}
 
 /**
@@ -2085,7 +1997,7 @@ class FormHelperTest extends CakeTestCase {
 			'Email',
 			'/label',
 			array('input' => array(
-				'maxlength' => 255, 'type' => 'text', 'name' => 'data[Contact][email]',
+				'type' => 'text', 'name' => 'data[Contact][email]',
 				'id' => 'ContactEmail'
 			)),
 			'/div'
@@ -2099,7 +2011,7 @@ class FormHelperTest extends CakeTestCase {
 			'Email',
 			'/label',
 			array('input' => array(
-				'maxlength' => 255, 'type' => 'text', 'name' => 'data[Contact][5][email]',
+				'type' => 'text', 'name' => 'data[Contact][5][email]',
 				'id' => 'Contact5Email'
 			)),
 			'/div'
@@ -2734,7 +2646,7 @@ class FormHelperTest extends CakeTestCase {
 			array('label' => array('for' => "ContactMultiple")),
 			'Multiple',
 			'/label',
-			array('input' => array('type' => 'hidden', 'name' => "data[Contact][multiple]", 'value' => '', 'id' => "ContactMultiple", 'disabled' => 'disabled')),
+			array('input' => array('type' => 'hidden', 'name' => "data[Contact][multiple]", 'value' => '', 'id' => "ContactMultiple")),
 			array('div' => array('class' => 'checkbox')),
 			array('input' => array('type' => 'checkbox', 'name' => "data[Contact][multiple][]", 'value' => 1, 'disabled' => 'disabled', 'id' => "ContactMultiple1")),
 			array('label' => array('for' => "ContactMultiple1")),
@@ -3902,25 +3814,6 @@ class FormHelperTest extends CakeTestCase {
 			'/fieldset'
 		);
 		$this->assertTags($result, $expected);
-
-		$result = $this->Form->radio(
-			'Model.multibyte',
-			array('男性' => '男性')
-		);
-		$expected = array(
-			'input' => array(
-				'type' => 'hidden', 'name' => 'data[Model][multibyte]',
-				'id' => 'ModelMultibyte_', 'value' => '',
-			),
-			array('input' => array(
-				'type' => 'radio', 'name' => 'data[Model][multibyte]',
-				'id' => 'ModelMultibyte男性', 'value' => '男性')
-			),
-			array('label' => array('for' => 'ModelMultibyte男性')),
-			'男性',
-			'/label',
-		);
-		$this->assertTags($result, $expected);
 	}
 
 /**
@@ -4430,34 +4323,6 @@ class FormHelperTest extends CakeTestCase {
 			'hiddenField' => false
 		));
 		$this->assertTextNotContains('"Model1Field"', $result);
-	}
-
-/**
- * Test that radio() accepts a deep array for options
- *
- * @return void
- */
-	public function testRadioOptionsArray() {
-		$result = $this->Form->input('Model.field', array(
-			'type' => 'radio',
-			'legend' => false,
-			'div' => false,
-			'options' => array(
-				'1' => array('name' => 'Option A', 'title' => 'A Title'),
-				'2' => array('name' => 'Option B', 'data-foo' => 'bar'))
-		));
-		$expected = array(
-			array('input' => array('type' => 'hidden', 'name' => 'data[Model][field]', 'id' => 'ModelField_', 'value' => '')),
-			array('input' => array('type' => 'radio', 'name' => 'data[Model][field]', 'id' => 'ModelField1', 'value' => '1', 'title' => 'A Title')),
-			array('label' => array('for' => 'ModelField1')),
-			'Option A',
-			'/label',
-			array('input' => array('type' => 'radio', 'name' => 'data[Model][field]', 'id' => 'ModelField2', 'value' => '2', 'data-foo' => 'bar')),
-			array('label' => array('for' => 'ModelField2')),
-			'Option B',
-			'/label'
-		);
-		$this->assertTags($result, $expected);
 	}
 
 /**
@@ -5025,7 +4890,7 @@ class FormHelperTest extends CakeTestCase {
  */
 	public function testSelectMultipleWithDisabledElements() {
 		$options = array(1 => 'One', 2 => 'Two', '3' => 'Three', '3x' => 'Stringy');
-		$disabled = array(1);
+		$disabled = array(2, 3);
 		$result = $this->Form->select('Contact.multiple', $options, array('multiple' => 'multiple', 'disabled' => $disabled));
 		$expected = array(
 			'input' => array(
@@ -5034,13 +4899,13 @@ class FormHelperTest extends CakeTestCase {
 			'select' => array(
 				'name' => 'data[Contact][multiple][]', 'multiple' => 'multiple', 'id' => 'ContactMultiple'
 			),
-			array('option' => array('value' => '1', 'disabled' => 'disabled')),
+			array('option' => array('value' => '1')),
 			'One',
 			'/option',
-			array('option' => array('value' => '2')),
+			array('option' => array('value' => '2', 'disabled' => 'disabled')),
 			'Two',
 			'/option',
-			array('option' => array('value' => '3')),
+			array('option' => array('value' => '3', 'disabled' => 'disabled')),
 			'Three',
 			'/option',
 			array('option' => array('value' => '3x')),
@@ -5090,7 +4955,7 @@ class FormHelperTest extends CakeTestCase {
 			'Multiple',
 			'/label',
 			'input' => array(
-				'type' => 'hidden', 'name' => 'data[Contact][multiple]', 'value' => '', 'id' => 'ContactMultiple_', 'disabled' => 'disabled'
+				'type' => 'hidden', 'name' => 'data[Contact][multiple]', 'value' => '', 'id' => 'ContactMultiple_'
 			),
 			'select' => array(
 				'name' => 'data[Contact][multiple][]', 'disabled' => 'disabled', 'multiple' => 'multiple', 'id' => 'ContactMultiple'
@@ -7478,53 +7343,6 @@ class FormHelperTest extends CakeTestCase {
 	}
 
 /**
- * testInputDate method
- *
- * Test various inputs with type date and different option attributes.
- *
- * @return void
- */
-	public function testInputDateOptions() {
-		$this->Form->create('User');
-
-		$result = $this->Form->input('date',
-			array(
-				'label' => false,
-				'type' => 'day',
-				'class' => 'form-control'
-			)
-		);
-		$this->assertContains('class="form-control"', $result);
-
-		$result = $this->Form->input('date',
-			array(
-				'label' => false,
-				'type' => 'month',
-				'class' => 'form-control'
-			)
-		);
-		$this->assertContains('class="form-control"', $result);
-
-		$result = $this->Form->input('date',
-			array(
-				'label' => false,
-				'type' => 'year',
-				'class' => 'form-control'
-			)
-		);
-		$this->assertContains('class="form-control"', $result);
-
-		$result = $this->Form->input('date',
-			array(
-				'label' => false,
-				'type' => 'hour',
-				'class' => 'form-control'
-			)
-		);
-		$this->assertContains('class="form-control"', $result);
-	}
-
-/**
  * testInputDateMaxYear method
  *
  * Let's say we want to only allow users born from 2006 to 2008 to register
@@ -7593,37 +7411,6 @@ class FormHelperTest extends CakeTestCase {
 		$expected = array(
 			'textarea' => array('name' => 'data[Model][0][OtherModel][field]', 'id' => 'Model0OtherModelField'),
 			'/textarea'
-		);
-		$this->assertTags($result, $expected);
-	}
-
-/**
- * Test textareas maxlength reading from schema.
- *
- * @return void
- */
-	public function testTextAreaMaxLength() {
-		$result = $this->Form->input('UserForm.other', array('type' => 'textarea'));
-		$expected = array(
-			'div' => array('class' => 'input textarea'),
-				'label' => array('for' => 'UserFormOther'),
-					'Other',
-				'/label',
-				'textarea' => array('name' => 'data[UserForm][other]', 'cols' => '30', 'rows' => '6', 'id' => 'UserFormOther'),
-				'/textarea',
-			'/div'
-		);
-		$this->assertTags($result, $expected);
-
-		$result = $this->Form->input('UserForm.stuff', array('type' => 'textarea'));
-		$expected = array(
-			'div' => array('class' => 'input textarea'),
-				'label' => array('for' => 'UserFormStuff'),
-					'Stuff',
-				'/label',
-				'textarea' => array('name' => 'data[UserForm][stuff]', 'maxlength' => 10, 'cols' => '30', 'rows' => '6', 'id' => 'UserFormStuff'),
-				'/textarea',
-			'/div'
 		);
 		$this->assertTags($result, $expected);
 	}
@@ -8736,7 +8523,6 @@ class FormHelperTest extends CakeTestCase {
 			'escape' => false,
 			'url' => array(
 				'action' => 'edit',
-				'0',
 				'myparam'
 			)
 		));
@@ -8744,7 +8530,7 @@ class FormHelperTest extends CakeTestCase {
 			'form' => array(
 				'id' => 'ContactAddForm',
 				'method' => 'post',
-				'action' => '/contacts/edit/0/myparam',
+				'action' => '/contacts/edit/myparam',
 				'accept-charset' => $encoding
 			),
 			'div' => array('style' => 'display:none;'),
@@ -8762,8 +8548,8 @@ class FormHelperTest extends CakeTestCase {
 	public function testCreateNoErrorsWithMockModel() {
 		$encoding = strtolower(Configure::read('App.encoding'));
 		$ContactMock = $this->getMockBuilder('Contact')
-			->disableOriginalConstructor()
-			->getMock();
+				->disableOriginalConstructor()
+				->getMock();
 		ClassRegistry::removeObject('Contact');
 		ClassRegistry::addObject('Contact', $ContactMock);
 		$result = $this->Form->create('Contact', array('type' => 'GET'));
@@ -9751,7 +9537,6 @@ class FormHelperTest extends CakeTestCase {
 				'textarea' => array(
 					'id' => 'ValidateProfile1ValidateItem2Name',
 					'name' => 'data[ValidateProfile][1][ValidateItem][2][name]',
-					'maxlength' => 255,
 					'cols' => 30,
 					'rows' => 6
 				),
@@ -9868,7 +9653,7 @@ class FormHelperTest extends CakeTestCase {
 		$expected = array(
 			'div' => array('class' => 'input text'),
 			'input' => array(
-				'maxlength' => 255, 'type' => 'text', 'name' => 'data[Contact][email]',
+				'type' => 'text', 'name' => 'data[Contact][email]',
 				'id' => 'ContactEmail'
 			),
 			'/div'
@@ -9882,7 +9667,7 @@ class FormHelperTest extends CakeTestCase {
 		$expected = array(
 			'div' => array('class' => 'input text'),
 			array('input' => array(
-				'maxlength' => 255, 'type' => 'text', 'name' => 'data[Contact][email]',
+				'type' => 'text', 'name' => 'data[Contact][email]',
 				'id' => 'ContactEmail'
 			)),
 			'label' => array('for' => 'ContactEmail'),
@@ -9902,7 +9687,7 @@ class FormHelperTest extends CakeTestCase {
 		$expected = array(
 			'div' => array('class' => 'input text'),
 			array('input' => array(
-				'maxlength' => 255, 'type' => 'text', 'name' => 'data[Contact][email]',
+				'type' => 'text', 'name' => 'data[Contact][email]',
 				'id' => 'ContactEmail'
 			)),
 			array('div' => array()),
@@ -9992,6 +9777,7 @@ class FormHelperTest extends CakeTestCase {
 	}
 
 /**
+ *
  * @expectedException CakeException
  * @return void
  */

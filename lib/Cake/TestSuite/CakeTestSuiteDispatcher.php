@@ -37,7 +37,7 @@ class CakeTestSuiteDispatcher {
 		'codeCoverage' => false,
 		'case' => null,
 		'core' => false,
-		'app' => false,
+		'app' => true,
 		'plugin' => null,
 		'output' => 'html',
 		'show' => 'groups',
@@ -63,7 +63,7 @@ class CakeTestSuiteDispatcher {
 /**
  * boolean to set auto parsing of params.
  *
- * @var bool
+ * @var boolean
  */
 	protected $_paramsParsed = false;
 
@@ -130,7 +130,7 @@ class CakeTestSuiteDispatcher {
 /**
  * Checks for the existence of the test framework files
  *
- * @return bool true if found, false otherwise
+ * @return boolean true if found, false otherwise
  */
 	public function loadTestFramework() {
 		if (class_exists('PHPUnit_Framework_TestCase')) {
@@ -151,12 +151,6 @@ class CakeTestSuiteDispatcher {
 			} elseif (is_dir($vendor . DS . 'PHPUnit')) {
 				ini_set('include_path', $vendor . PATH_SEPARATOR . ini_get('include_path'));
 				break;
-			} elseif (is_file($vendor . DS . 'phpunit.phar')) {
-				$backup = $GLOBALS['_SERVER']['SCRIPT_NAME'];
-				$GLOBALS['_SERVER']['SCRIPT_NAME'] = '-';
-				$included = include_once $vendor . DS . 'phpunit.phar';
-				$GLOBALS['_SERVER']['SCRIPT_NAME'] = $backup;
-				return $included;
 			}
 		}
 		include 'PHPUnit' . DS . 'Autoload.php';
@@ -268,8 +262,8 @@ class CakeTestSuiteDispatcher {
 /**
  * Sets a static timestamp
  *
- * @param bool $reset to set new static timestamp.
- * @return int timestamp
+ * @param boolean $reset to set new static timestamp.
+ * @return integer timestamp
  */
 	public static function time($reset = false) {
 		static $now;

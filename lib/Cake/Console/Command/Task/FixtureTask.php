@@ -242,8 +242,8 @@ class FixtureTask extends BakeTask {
 		$this->_Schema = new CakeSchema();
 		$data = $this->_Schema->read(array('models' => false, 'connection' => $this->connection));
 		if (!isset($data['tables'][$useTable])) {
-			$this->err("<warning>Warning:</warning> Could not find the '${useTable}' table for ${model}.");
-			return;
+			$this->error('Could not find your selected table ' . $useTable);
+			return false;
 		}
 
 		$tableInfo = $data['tables'][$useTable];
@@ -316,7 +316,7 @@ class FixtureTask extends BakeTask {
  * Generate String representation of Records
  *
  * @param array $tableInfo Table schema array
- * @param int $recordCount The number of records to generate.
+ * @param integer $recordCount
  * @return array Array of records to use in the fixture.
  */
 	protected function _generateRecords($tableInfo, $recordCount = 1) {
@@ -381,7 +381,7 @@ class FixtureTask extends BakeTask {
 	}
 
 /**
- * Convert a $records array into a string.
+ * Convert a $records array into a a string.
  *
  * @param array $records Array of records to be converted to string
  * @return string A string value of the $records array.

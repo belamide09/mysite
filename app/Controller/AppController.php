@@ -19,6 +19,15 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+if (!defined('FULL_BASE_PATH')) {
+
+	$url = split('/',$_SERVER['REQUEST_URI']);
+	$website = $url[1];
+	$base_url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/'.$website.'/';
+
+	define('FULL_BASE_PATH', $base_url);
+}
+
 App::uses('Controller', 'Controller');
 
 /**
@@ -31,4 +40,52 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	public $ext = '.php';
+	public $components = array(
+		'DebugKit.Toolbar',
+		'Session',
+		'Cookie',
+		'Auth' => array(
+			'authenticate'=>array(
+				'Form'=>array(
+					'fields'=>array('username'=>'email','password'=>'password')
+				)
+			),
+			'loginRedirect' => array('controller' => 'home', 'action' => 'index'),
+			'logoutRedirect' => array('controller' => 'login', 'action' => 'index'),
+			'loginAction' => FULL_BASE_PATH.'login',
+			'authError' => 'Kinahanglan paka mo login para ma access ni'
+		)
+	);
+
+	public function beforeFilter() {
+		$this->Cookie->httpOnly = true;
+		/*Configure Path*/
+		App::build(array(
+			'Model'=>array(CAKE_CORE_INCLUDE_PATH.'/Model/Base/',CAKE_CORE_INCLUDE_PATH.'/Model/',APP_DIR.'/Model/',CAKE_CORE_INCLUDE_PATH.'/Model/Form/'),
+			'Lib'=>array(CAKE_CORE_INCLUDE_PATH.'/Lib/'),
+			'Vendor'=>array(CAKE_CORE_INCLUDE_PATH.'/Vendor/')
+		));
+
+		/*Autoload Model*/
+		App::import('Model',array('CommonTable'));
+
+		/*Autoload Lib*/
+		App::uses('myTools','Lib');
+		App::uses('myMailer','Lib');
+		App::uses('myError','Lib');
+
+		/*Autoload table class*/
+		spl_autoload_register(function($class){
+			$classFile1 = CAKE_CORE_INCLUDE_PATH.'/Model/'.$class.'.php';
+			$classFile2 = CAKE_CORE_INCLUDE_PATH.'/Model/Form/'.$class.'.php';
+			if(is_file($classFile1)){ require_once($classFile1); }
+			if(is_file($classFile2)){ require_once($classFile2); }
+		});
+
+		/*Autoload Lib*/
+		Configure::load('my');
+		Configure::load('const');
+
+	}
 }

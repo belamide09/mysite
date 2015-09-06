@@ -28,7 +28,7 @@ class AssetDispatcher extends DispatcherFilter {
  * Default priority for all methods in this filter
  * This filter should run before the request gets parsed by router
  *
- * @var int
+ * @var integer
  */
 	public $priority = 9;
 
@@ -108,7 +108,7 @@ class AssetDispatcher extends DispatcherFilter {
 /**
  * Builds asset file path based off url
  *
- * @param string $url URL
+ * @param string $url
  * @return string Absolute path for asset file
  */
 	protected function _getAssetFile($url) {
@@ -149,11 +149,12 @@ class AssetDispatcher extends DispatcherFilter {
 			}
 			$response->type($contentType);
 		}
-		$response->length(false);
+		if (!$compressionEnabled) {
+			$response->header('Content-Length', filesize($assetFile));
+		}
 		$response->cache(filemtime($assetFile));
 		$response->send();
 		ob_clean();
-
 		if ($ext === 'css' || $ext === 'js') {
 			include $assetFile;
 		} else {

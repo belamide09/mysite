@@ -86,7 +86,7 @@ class CakeTestFixture {
  * When table is created for a fixture the MEMORY engine is used
  * where possible. Set $canUseMemory to false if you don't want this.
  *
- * @var bool
+ * @var boolean
  */
 	public $canUseMemory = true;
 
@@ -200,7 +200,7 @@ class CakeTestFixture {
  * Run before all tests execute, should return SQL statement to create table for this fixture could be executed successfully.
  *
  * @param DboSource $db An instance of the database object used to create the fixture table
- * @return bool True on success, false on failure
+ * @return boolean True on success, false on failure
  */
 	public function create($db) {
 		if (!isset($this->fields) || empty($this->fields)) {
@@ -251,7 +251,7 @@ class CakeTestFixture {
  * Run after all tests executed, should return SQL statement to drop table for this fixture.
  *
  * @param DboSource $db An instance of the database object used to create the fixture table
- * @return bool True on success, false on failure
+ * @return boolean True on success, false on failure
  */
 	public function drop($db) {
 		if (empty($this->fields)) {
@@ -273,7 +273,7 @@ class CakeTestFixture {
  * of this fixture could be executed successfully.
  *
  * @param DboSource $db An instance of the database into which the records will be inserted
- * @return bool on success or if there are no records to insert, or false on failure
+ * @return boolean on success or if there are no records to insert, or false on failure
  * @throws CakeException if counts of values and fields do not match.
  */
 	public function insert($db) {
@@ -287,25 +287,17 @@ class CakeTestFixture {
 				$fields = array_unique($fields);
 				$default = array_fill_keys($fields, null);
 				foreach ($this->records as $record) {
-					$mergeData = array_merge($default, $record);
-					$merge = array_values($mergeData);
+					$merge = array_values(array_merge($default, $record));
 					if (count($fields) !== count($merge)) {
-
-						$mergeFields = array_diff_key(array_keys($mergeData), $fields);
-
-						$message = 'Fixture invalid: Count of fields does not match count of values in ' . get_class($this) . "\n";
-						foreach ($mergeFields as $field) {
-							$message .= "The field '" . $field . "' is in the data fixture but not in the schema." . "\n";
-						}
-
-						throw new CakeException($message);
+						throw new CakeException('Fixture invalid: Count of fields does not match count of values');
 					}
 					$values[] = $merge;
 				}
 				$nested = $db->useNestedTransactions;
 				$db->useNestedTransactions = false;
 				$result = $db->insertMulti($this->table, $fields, $values);
-				if ($this->primaryKey &&
+				if (
+					$this->primaryKey &&
 					isset($this->fields[$this->primaryKey]['type']) &&
 					in_array($this->fields[$this->primaryKey]['type'], array('integer', 'biginteger'))
 				) {
@@ -323,7 +315,7 @@ class CakeTestFixture {
  * CakeFixture to trigger other events before / after truncate.
  *
  * @param DboSource $db A reference to a db instance
- * @return bool
+ * @return boolean
  */
 	public function truncate($db) {
 		$fullDebug = $db->fullDebug;

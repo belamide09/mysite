@@ -206,7 +206,7 @@ class ViewTask extends BakeTask {
 		$this->Controller->connection = $this->connection;
 		$this->controllerName = $this->Controller->getName();
 
-		$prompt = __d('cake_console', "Would you like bake to build your views interactively?\nWarning: Choosing no will overwrite %s views if they exist.", $this->controllerName);
+		$prompt = __d('cake_console', "Would you like bake to build your views interactively?\nWarning: Choosing no will overwrite %s views if it exist.", $this->controllerName);
 		$interactive = $this->in($prompt, array('y', 'n'), 'n');
 
 		if (strtolower($interactive) === 'n') {
@@ -248,7 +248,7 @@ class ViewTask extends BakeTask {
  *	'singularHumanName', 'pluralHumanName', 'fields', 'foreignKeys',
  *	'belongsTo', 'hasOne', 'hasMany', 'hasAndBelongsToMany'
  *
- * @return array Returns a variables to be made available to a view template
+ * @return array Returns an variables to be made available to a view template
  */
 	protected function _loadController() {
 		if (!$this->controllerName) {
@@ -298,7 +298,7 @@ class ViewTask extends BakeTask {
  * Bake a view file for each of the supplied actions
  *
  * @param array $actions Array of actions to make files for.
- * @param array $vars The template variables.
+ * @param array $vars
  * @return void
  */
 	public function bakeActions($actions, $vars) {
@@ -342,7 +342,7 @@ class ViewTask extends BakeTask {
  *
  * @param string $action Action to bake
  * @param string $content Content to write
- * @return bool Success
+ * @return boolean Success
  */
 	public function bake($action, $content = '') {
 		if ($content === true) {
@@ -454,8 +454,8 @@ class ViewTask extends BakeTask {
 /**
  * Returns associations for controllers models.
  *
- * @param Model $model The Model instance.
- * @return array associations
+ * @param Model $model
+ * @return array $associations
  */
 	protected function _associations(Model $model) {
 		$keys = array('belongsTo', 'hasOne', 'hasMany', 'hasAndBelongsToMany');

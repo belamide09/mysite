@@ -23,7 +23,6 @@ App::uses('HtmlHelper', 'View/Helper');
 App::uses('FormHelper', 'View/Helper');
 App::uses('ClassRegistry', 'Utility');
 App::uses('Folder', 'Utility');
-App::uses('CakePlugin', 'Core');
 
 if (!defined('FULL_BASE_URL')) {
 	define('FULL_BASE_URL', 'http://cakephp.org');
@@ -46,7 +45,7 @@ class TheHtmlTestController extends Controller {
 /**
  * uses property
  *
- * @var mixed
+ * @var mixed null
  */
 	public $uses = null;
 }
@@ -697,31 +696,6 @@ class HtmlHelperTest extends CakeTestCase {
 	}
 
 /**
- * Test css() with once option.
- *
- * @return void
- */
-	public function testCssLinkOnce() {
-		Configure::write('Asset.filter.css', false);
-
-		$result = $this->Html->css('screen', array('once' => true));
-		$expected = array(
-			'link' => array('rel' => 'stylesheet', 'type' => 'text/css', 'href' => 'preg:/.*css\/screen\.css/')
-		);
-		$this->assertTags($result, $expected);
-
-		$result = $this->Html->css('screen', array('once' => true));
-		$this->assertEquals('', $result);
-
-		// Default is once=false
-		$result = $this->Html->css('screen');
-		$expected = array(
-			'link' => array('rel' => 'stylesheet', 'type' => 'text/css', 'href' => 'preg:/.*css\/screen\.css/')
-		);
-		$this->assertTags($result, $expected);
-	}
-
-/**
  * Test css link BC usage
  *
  * @return void
@@ -900,22 +874,6 @@ class HtmlHelperTest extends CakeTestCase {
 	}
 
 /**
- * Resource names must be treated differently for css() and script()
- *
- * @return void
- */
-	public function testBufferedCssAndScriptWithIdenticalResourceName() {
-		$this->View->expects($this->at(0))
-			->method('append')
-			->with('css', $this->stringContains('test.min.css'));
-		$this->View->expects($this->at(1))
-			->method('append')
-			->with('script', $this->stringContains('test.min.js'));
-		$this->Html->css('test.min', array('inline' => false));
-		$this->Html->script('test.min', array('inline' => false));
-	}
-
-/**
  * test timestamp enforcement for script tags.
  *
  * @return void
@@ -948,7 +906,7 @@ class HtmlHelperTest extends CakeTestCase {
 	public function testPluginScriptTimestamping() {
 		CakePlugin::load('TestPlugin');
 
-		$pluginPath = CakePlugin::path('TestPlugin');
+		$pluginPath = App::pluginPath('TestPlugin');
 		$pluginJsPath = $pluginPath . 'webroot/js';
 		$this->skipIf(!is_writable($pluginJsPath), $pluginJsPath . ' is not Writable, timestamp testing has been skipped.');
 
@@ -1755,6 +1713,7 @@ class HtmlHelperTest extends CakeTestCase {
 
 		$result = $this->Html->meta('keywords', 'these, are, some, meta, keywords');
 		$this->assertTags($result, array('meta' => array('name' => 'keywords', 'content' => 'these, are, some, meta, keywords')));
+		$this->assertRegExp('/\s+\/>$/', $result);
 
 		$result = $this->Html->meta('description', 'this is the meta description');
 		$this->assertTags($result, array('meta' => array('name' => 'description', 'content' => 'this is the meta description')));

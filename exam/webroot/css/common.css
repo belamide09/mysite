@@ -1,0 +1,28 @@
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/** General Style Info **/
+body {
+	background: #003d4c;
+}
+#header
+{
+	height: 100px;
+	background: rgba(20,80,120,200);
+	border: 1px solid transparent;
+}
+#header .logo
+{
+	margin: 15px 20px;
+	height: 40px;
+}
+#content {
+	background: #f9f9f9;
+}
+#footer {
+	height: 80px;
+	background: rgba(20,80,120,200);
+}
