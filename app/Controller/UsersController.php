@@ -42,6 +42,18 @@ class UsersController extends AppController {
 		
 	}
 
+	public function register() {
+
+		if($this->request->is('post')) {
+			$values = $this->request->data['User'];
+			$data = array(
+				'email'			=> $values['email'],
+				'password'	=> $values['password']
+			);
+		}
+
+	}
+
 
 	public function logout() {
 		return $this->redirect($this->Auth->logout());
