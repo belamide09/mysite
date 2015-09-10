@@ -26,6 +26,9 @@ Router::connect('/login', array('controller' => 'Users', 'action' => 'login'));
 Router::connect('/logout', array('controller' => 'Users', 'action' => 'logout'));
 
 
+//Exam
+Router::connect('/exam', array('controller' => 'Exam', 'action' => 'index'));
+
 /**
 * Load all plugin routes. See the CakePlugin documentation on
 * how to customize the loading of plugin routes.

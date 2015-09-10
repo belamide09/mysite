@@ -1,0 +1,46 @@
+2015-09-09 17:37:28 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/admin/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\admin\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-09 17:38:25 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\mysite\admin\Config\routes.php, line 27]
+2015-09-09 17:38:25 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /mysite/admin/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 27, Array)
+#2 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 27, Array)
+#3 C:\xampp\htdocs\mysite\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-09 17:38:37 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/admin/
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\admin\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-09 17:40:13 Error: [MissingControllerException] Controller class Forms.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Forms.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/admin/forms.html
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\admin\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-09 17:42:03 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /mysite/admin/index.html
+Stack Trace:
+#0 C:\xampp\htdocs\mysite\admin\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
