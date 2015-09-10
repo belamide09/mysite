@@ -11,4 +11,8 @@ class HomeController extends AppController {
 
 	}
 
+	public function test() {
+		$this->autoRender = false;
+	}
+
 }

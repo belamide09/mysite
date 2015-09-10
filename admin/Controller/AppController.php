@@ -40,7 +40,7 @@ class AppController extends Controller {
 					'fields'=>array('username'=>'email','password'=>'password')
 				)
 			),
-			'loginRedirect' 	=> array('controller' => 'users', 'action' => 'login'),
+			'loginRedirect' 	=> array('controller' => 'home', 'action' => 'index'),
 			'logoutRedirect' 	=> array('controller' => 'login', 'action' => 'index'),
 			'loginAction' 		=> '/login',
 			'authError' 			=> 'You have no access to this page'

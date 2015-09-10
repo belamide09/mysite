@@ -1,48 +1,72 @@
-<!-- Start: Page Wrap -->
 <div id="wrap" class="container_24">
 
-	<!-- Header Grid Container: Start -->
 	<div class="login">
 		
-	<!-- Info Notice: Start -->
 	<div class="notice info">
-		<p>Just press the <b>login button</b> on the right, or focus a field and enter to login.</p>
+
+		<?php 
+
+			$authFlash = $this->Session->flash('auth'); 
+			
+			if ($authFlash) {
+				echo "<p> $authFlash </p>";
+			} else {
+				echo " <p>Just press the <b>login button</b> 
+							on the right, or focus a field and enter to login.</p>";
+			}
+
+		?>
+
 	</div>
-	<!-- Info Notice: End -->
 	
-		<!-- Header: Start -->
 		<div id="header">
 				
-			<!-- Logo: Start -->
 			<a href="#" id="logo">Simplpan - Admin Panel</a>
-			<!-- Logo: End -->
 			
-			<!-- Login: Start -->
-			<form action="dashboard.html" id="login">
+			<?php echo $this->Form->create('User',array('id'	=> 'login'))?>
 				
-				<!-- Username Input: Start -->
 				<label for="username" class="label_username">User</label>
-				<input type="text" name="username" placeholder="Username" id="username" class="password tip-stay validate" title="Enter your username" />
-				<!-- Username Input: End -->
-				
-				<!-- Password Input: Start -->
+				<?php
+					echo $this->Form->input(' ',array(
+						'name'				=> 'username',
+						'value'				=> (isset($data)) ? $data['username'] : '',
+						'placeholder'	=> 'Enter username',
+						'class'				=> 'password tip-stay validate',
+						'title'				=> 'Enter your username',
+						'div'					=> false,
+						'label'				=> false
+						)
+					);
+				?>
+
 				<label for="password" class="label_password">Password</label>
-				<input type="password" name="password" placeholder="Password" id="password" class="password tip-stay validate" title="Enter your password" />
-				<!-- Password Input: End -->
+				<?php 
+					echo $this->Form->input(' ',array(
+						'type'				=> 'password',
+						'name'				=> 'password',
+						'value'				=> (isset($data)) ? $data['password'] : '',
+						'placeholder'	=> 'Enter password',
+						'class'				=> 'password tip-stay validate',
+						'title'				=> 'Enter you password',
+						'div'					=> false,
+						'label'				=> false
+						)
+					);
+				?>
+
+				<?php echo $this->Form->submit('login',array(
+								'value'	=> 'login',
+								'class'	=> 'tip',
+								'title'	=> 'login',
+								'div'		=> false
+								)
+							);
+				?>
 				
-				<!-- Login Button: Start -->
-				<input type="submit" value="login" class="tip" title="Login" />
-				<!-- Login Button: End -->
-				
-			</form>
-			<!-- Login: End -->
+			<?php echo $this->Form->end()?>
 			
 		</div>
-		<!-- Header: End -->
-		
 		
 	</div>
-	<!-- Header Grid Container: End -->
 
 </div>
-<!-- End: Page Wrap -->
