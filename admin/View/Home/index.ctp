@@ -5,31 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Simplpan - Admin Panel</title>
 	
-	<!-- Imports General CSS and jQuery CSS -->
-	<link href="css/screen.css" rel="stylesheet" media="screen" type="text/css" />
 	
-	<!-- CSS for Fluid and Fixed Widths - Double to prevent flickering on change -->
-	<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" />
-	<link href="css/fixed.css" rel="stylesheet" media="screen" type="text/css" class="width" />
-	
-	<!-- IE Stylesheet ie7 - Added in 1.2 -->
-	<!--[if lt IE 8]> <html lang="en" class="ie7"> <![endif]-->
-	
-	<!-- IE Stylesheet ie8 - Added in 1.1 -->
-	<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
-	
-	<!-- CSS for Theme Styles - Double to prevent flickering on change -->
-	<link href="css/theme/blue.css" rel="stylesheet" media="screen" type="text/css" />
-	<link href="css/theme/blue.css" rel="stylesheet" media="screen" type="text/css" class="theme" />
-	
-	<!-- IE Canvas Fix for Visualize Charts - Added in 1.1 -->
-	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
-	
-	<!-- jQuery thats loaded before document ready to prevent flickering - Rest are found at the bottom -->
-	<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="js/jquery.styleswitcher.js"></script>
-	<script type="text/javascript" src="js/jquery.visualize.js"></script>
 	
 </head>
 
