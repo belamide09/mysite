@@ -45,7 +45,7 @@ class AppController extends Controller {
 			'loginAction' 		=> '/login',
 			'authError' 			=> 'You have no access to this page'
 		)
-	);
+	);    
 
 	public function beforeFilter() {
 		/*Configure Path*/

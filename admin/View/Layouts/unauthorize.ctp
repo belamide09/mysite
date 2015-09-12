@@ -31,37 +31,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+		echo $this->Html->css('default-blue-white');
+		echo $this->Html->script('plugins/modernizr/modernizr');
+		echo $this->Html->script('plugins/jquery/jquery.min');
+		echo $this->Html->script('plugins/bootstrap/bootstrap.min');
+
 	?>
-		<!-- Imports General CSS and jQuery CSS -->
-
-	<?php 
-		echo $this->Html->css('screen');
-		echo $this->Html->css('fixed');
-		echo $this->Html->css('fixed',array(
-			'class'	=> 'width',
-			'media'	=> 'screen'
-			)
-		);
-		echo $this->Html->css('theme/blue');
-		echo $this->Html->css('theme/blue',array(
-			'class'	=> 'theme'
-			)
-		);
-
-		echo $this->Html->script('jquery-1.4.1.min');
-		echo $this->Html->script('jquery.cookie');
-		echo $this->Html->script('jquery.styleswitcher');
-		echo $this->Html->script('jquery.visualize');
-	?>
-
+     
 </head>
 <body>
-	<div id="container">
-		<div id="content">
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-	</div>
+	<?php echo $this->fetch('content'); ?>
 </body>
 </html>

@@ -2,6 +2,12 @@
 
 class myTools{
 
+
+	public function getWebsiteName() {
+
+		return "Sample WEBSITE";
+	}
+
 	/**
 	* Get Datetime now
 	* @return string date now
@@ -18,6 +24,20 @@ class myTools{
 	public static function generateFileName($ext,$post_id,$x) {
 		$file_name = date('YmdHis').$post_id.$x.'.'.$ext;
 		return $file_name;
+	}
+
+	public function adminDatetime($datetime) {
+		$dateRet = "";
+		if ($datetime) {
+			$stamp = strtotime($datetime);
+			$dateRet = date('m/d/Y (D) H:i');
+			$dateRet = "<strong>$dateRet</strong>";
+		}
+		return $dateRet;
+	}
+
+	public function getBaseUrl() {
+		return 'http://mysite.com/';
 	}
 
 }

@@ -1,72 +1,66 @@
-<div id="wrap" class="container_24">
 
-	<div class="login">
-		
-	<div class="notice info">
-
-		<?php 
-
-			$authFlash = $this->Session->flash('auth'); 
-			
-			if ($authFlash) {
-				echo "<p> $authFlash </p>";
-			} else {
-				echo " <p>Just press the <b>login button</b> 
-							on the right, or focus a field and enter to login.</p>";
-			}
-
-		?>
-
-	</div>
-	
-		<div id="header">
-				
-			<a href="#" id="logo">Simplpan - Admin Panel</a>
-			
-			<?php echo $this->Form->create('User',array('id'	=> 'login'))?>
-				
-				<label for="username" class="label_username">User</label>
-				<?php
-					echo $this->Form->input(' ',array(
-						'name'				=> 'username',
-						'value'				=> (isset($data)) ? $data['username'] : '',
-						'placeholder'	=> 'Enter username',
-						'class'				=> 'password tip-stay validate',
-						'title'				=> 'Enter your username',
-						'div'					=> false,
-						'label'				=> false
-						)
-					);
-				?>
-
-				<label for="password" class="label_password">Password</label>
-				<?php 
-					echo $this->Form->input(' ',array(
-						'type'				=> 'password',
-						'name'				=> 'password',
-						'value'				=> (isset($data)) ? $data['password'] : '',
-						'placeholder'	=> 'Enter password',
-						'class'				=> 'password tip-stay validate',
-						'title'				=> 'Enter you password',
-						'div'					=> false,
-						'label'				=> false
-						)
-					);
-				?>
-
-				<?php echo $this->Form->submit('login',array(
-								'value'	=> 'login',
-								'class'	=> 'tip',
-								'title'	=> 'login',
-								'div'		=> false
-								)
-							);
-				?>
-				
-			<?php echo $this->Form->end()?>
-			
-		</div>
-		
-	</div>
-
+<style>.dev-page{visibility: hidden;}</style>
+                
+<!-- page wrapper -->
+<div class="dev-page dev-page-login">
+              
+  <div class="dev-page-login-block">
+    <div class="dev-page-login-block__form">
+      
+      <?php $flash = $this->Session->flash('auth') ?>
+      <?php if ($flash):?>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <strong>Error!</strong> <?php echo $flash?>
+        </div>
+      <?php endif; ?>
+      
+      <?php echo $this->Form->create()?>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          <?php
+            echo $this->Form->input(' ',array(
+              'class'       => 'form-control',
+              'name'        => 'username',
+              'value'       => isset($data) ? $data['username'] : '',
+              'placeholder' => 'Enter username',
+              'required'
+              )
+            );
+          ?>
+        </div>
+      </div>                        
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+          <?php
+            echo $this->Form->password(' ',array(
+              'name'        => 'password',
+              'class'       => 'form-control',
+              'value'       => isset($data) ? $data['password'] : '',
+              'placeholder' => 'Enter password',
+              'required'
+              )
+            );
+          ?>
+        </div>
+      </div>
+      <div class="form-group no-border margin-top-20">
+        <button class="btn btn-success btn-block">Login</button>
+      </div>       
+      <?php echo $this->Form->end()?>
+    </div>
+    <div class="dev-page-login-block__footer">                    
+        © 2015 <strong>Website Name</strong>. All rights reserved.
+    </div>
+  </div>
+    
 </div>
+<!-- ./page wrapper -->                
+
+<!-- javascript -->
+
+
+
+
+

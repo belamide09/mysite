@@ -15,7 +15,13 @@
  */
 
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
+$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
+
+$sidebar = 'dev-page';
+if (@$_COOKIE['sidebar']) {
+	$sidebar = $_COOKIE['sidebar'];
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,46 +34,81 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
-	?>
-		<!-- Imports General CSS and jQuery CSS -->
+	
+		echo $this->Html->css('default-blue-white.css',array('id'	=> 'dev-css'));
 
-	<?php 
-		echo $this->Html->css('screen');
-		echo $this->Html->css('fixed');
-		echo $this->Html->css('fixed',array(
-			'class'	=> 'width',
-			'media'	=> 'screen'
-			)
-		);
-		echo $this->Html->css('theme/blue');
-		echo $this->Html->css('theme/blue',array(
-			'class'	=> 'theme'
-			)
-		);
+		echo $this->Html->script('jquery-latest.min');
 
-		echo $this->Html->script('jquery-1.4.1.min');
-		echo $this->Html->script('jquery.cookie');
-		echo $this->Html->script('jquery.styleswitcher');
-		echo $this->Html->script('jquery.visualize');
 	?>
+
+<style>.dev-page{visibility: hidden;}</style>
 
 </head>
 <body>
-	<div id="container">
-		<?php echo $this->element('header')?>
-		<div id="content">
 
-			<?php echo $this->Session->flash(); ?>
+  <div class="dev-page-loading preloader"></div>
+  
+  <!-- page wrapper -->
+  <div class="<?php echo $sidebar; ?>" id="page-sidebar">
+      
+    <?php echo $this->element('header'); ?>
+    
+    <div class="dev-page-container"> 
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<?php echo $this->element('footer')?>
+      <?php echo $this->element('side-bar'); ?>
+
+      <div class="dev-page-content">     
+        
+          <div class="container">
+
+            <?php echo $this->fetch('content'); ?>
+
+            <?php echo $this->element('copy-right'); ?>
+              
+          </div>
+
+      </div>     
+
+     </div>  
+
+    <?php echo $this->element('right-bar'); ?>
+
+
+    <?php echo $this->element('footer'); ?>
+
+	
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+     
+
 </body>
+
+<?php 
+
+
+	echo $this->Html->script('plugins/jquery/jquery.min');
+	echo $this->Html->script('plugins/bootstrap/bootstrap.min');
+	echo $this->Html->script('plugins/mcustomscrollbar/jquery.mCustomScrollbar.min');
+	echo $this->Html->script('plugins/moment/moment');
+	echo $this->Html->script('plugins/knob/jquery.knob.min');
+	echo $this->Html->script('plugins/sparkline/jquery.sparkline.min');
+	echo $this->Html->script('plugins/bootstrap-select/bootstrap-select');
+	echo $this->Html->script('plugins/bootstrap-datetimepicker/bootstrap-datetimepicker');
+	echo $this->Html->script('plugins/modernizr/modernizr');
+
+	echo $this->Html->script('plugins/nvd3/d3.min');
+	echo $this->Html->script('plugins/nvd3/nv.d3.min');
+	echo $this->Html->script('plugins/nvd3/lib/stream_layers');
+	echo $this->Html->script('plugins/waypoint/waypoints.min');
+	echo $this->Html->script('plugins/counter/jquery.counterup.min');
+
+	echo $this->Html->script('dev-settings');
+	echo $this->Html->script('dev-loaders');
+	echo $this->Html->script('dev-layout-default');
+	echo $this->Html->script('dev-app');
+
+?>
+
 </html>
