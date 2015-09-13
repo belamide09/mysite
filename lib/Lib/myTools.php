@@ -26,6 +26,11 @@ class myTools{
 		return $file_name;
 	}
 
+	/**
+	* Convert datetime to 01/01/2015 (Monday) 12:00 Format
+	* @param string $datetime
+	* @return string $dateRet
+	*/
 	public function adminDatetime($datetime) {
 		$dateRet = "";
 		if ($datetime) {
@@ -36,8 +41,19 @@ class myTools{
 		return $dateRet;
 	}
 
+	/**
+	* Get website full base url
+	* @return url
+	*/
 	public function getBaseUrl() {
 		return 'http://mysite.com/';
+	}
+
+	public function adminProfileLink($name,$id) {
+
+		$name = "<a href='http://localhost/mysite/admin/AdminManage/detail/$id'>$name</a>";
+		return $name;
+
 	}
 
 }

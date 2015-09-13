@@ -1,7 +1,6 @@
-
-
 <!-- page footer -->    
-<div class="dev-page-footer dev-page-footer-fixed"> <!-- dev-page-footer-closed dev-page-footer-fixed -->
+<div class="dev-page-footer dev-page-footer-fixed" id="page-footer"> 
+    <!-- dev-page-footer-closed dev-page-footer-fixed -->
     <ul class="dev-page-footer-controls">
         <li><a class="tip" title="Settings"><i class="fa fa-cogs"></i></a></li>
         <li><a class="tip" title="Support"><i class="fa fa-life-ring"></i></a></li>

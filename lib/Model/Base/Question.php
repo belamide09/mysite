@@ -2,10 +2,14 @@
 <?php
 App::uses('AppModel', 'Model');
 class Question extends AppModel{
+  public $belongsTo = array(
+    'Chapter',
+    'Admin'
+  );
   public $hasMany = array(
-  	'choises',
-  	'answers',
-    'users_question_answers'
+  	'Choise',
+  	'Answer',
+    'UsersQuestionAnswer'
   );
 
   public $validate = array(

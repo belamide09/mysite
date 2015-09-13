@@ -43,7 +43,7 @@ class AppController extends Controller {
 			'loginRedirect' 	=> array('controller' => 'home', 'action' => 'index'),
 			'logoutRedirect' 	=> array('controller' => 'login', 'action' => 'index'),
 			'loginAction' 		=> '/login',
-			'authError' 			=> 'You have no access to this page'
+			'authError' 			=> 'You have no access to the previous page'
 		)
 	);    
 

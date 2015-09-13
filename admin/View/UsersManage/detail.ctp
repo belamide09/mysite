@@ -118,6 +118,9 @@
                     </div>                        
                 </div>                                            
             </div>
-        </div>        
+        </div>
+        <div class="col-md-12">                                            
+          <button class="btn btn-primary pull-right">Save</button>
+        </div>   
     </div>
 </div>

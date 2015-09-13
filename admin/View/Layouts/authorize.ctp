@@ -17,11 +17,6 @@
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
 
-$sidebar = 'dev-page';
-if (@$_COOKIE['sidebar']) {
-	$sidebar = $_COOKIE['sidebar'];
-}
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,6 +37,8 @@ if (@$_COOKIE['sidebar']) {
 
 		echo $this->Html->script('jquery-latest.min');
 
+		echo $this->Html->script('sidebar-footer');
+
 	?>
 
 <style>.dev-page{visibility: hidden;}</style>
@@ -52,7 +49,7 @@ if (@$_COOKIE['sidebar']) {
   <div class="dev-page-loading preloader"></div>
   
   <!-- page wrapper -->
-  <div class="<?php echo $sidebar; ?>" id="page-sidebar">
+  <div class="dev-page" id="page-sidebar">
       
     <?php echo $this->element('header'); ?>
     

@@ -54,7 +54,7 @@ class AppController extends Controller {
 			'loginRedirect' => array('controller' => 'home', 'action' => 'index'),
 			'logoutRedirect' => array('controller' => 'login', 'action' => 'index'),
 			'loginAction' => FULL_BASE_PATH.'login',
-			'authError' => 'Kinahanglan paka mo login para ma access ni'
+			'authError' => 'You have no access to the previous page'
 		)
 	);
 
